@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/sucursales/v1/sucursales")
+@RequestMapping("/api/v1/sucursales")
 @RequiredArgsConstructor
 @Slf4j
 @Tag(name = "Sucursales", description = "Gestión de sucursales en MongoDB")
