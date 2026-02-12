@@ -17,7 +17,7 @@
 	<artifactId>sucursales</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sucursales</name>
-	<description>Microservicio de sucursales en MongoDB</description>
+	<description>Microservicio de sucursales en DynamoDB</description>
 
 	<properties>
 		<java.version>21</java.version>
