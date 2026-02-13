@@ -3,6 +3,8 @@ package com.arcbank.sucursales.model;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConverted;
+import com.arcbank.sucursales.converter.LocalDateConverter;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
@@ -40,6 +42,7 @@ public class Sucursal {
     // but for simplicity we assume it works or we might need a converter.
     // boostchicken supports Java 8 types.
     @DynamoDBAttribute
+    @DynamoDBTypeConverted(converter = LocalDateConverter.class)
     private LocalDate fechaApertura;
 
     @DynamoDBAttribute

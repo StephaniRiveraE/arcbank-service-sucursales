@@ -1,18 +1,28 @@
 package com.arcbank.sucursales.model;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDocument;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConverted;
+import com.arcbank.sucursales.converter.LocalDateConverter;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.Objects;
 
+@DynamoDBDocument
 @Getter
 @Setter
 public class Feriado {
 
+    @DynamoDBAttribute
+    @DynamoDBTypeConverted(converter = LocalDateConverter.class)
     private LocalDate fecha;
+    @DynamoDBAttribute
     private String descripcion;
+    @DynamoDBAttribute
     private String tipoFeriado;
+    @DynamoDBAttribute
     private Boolean activo;
 
     public Feriado() { }
