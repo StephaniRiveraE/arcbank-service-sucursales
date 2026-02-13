@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping("/api/v1/sucursales")
 @RequiredArgsConstructor
 @Slf4j
-@Tag(name = "Sucursales", description = "Gestión de sucursales en MongoDB")
+@Tag(name = "Sucursales", description = "Gestión de sucursales en DynamoDB")
 public class SucursalController {
 
     private final SucursalService service;
