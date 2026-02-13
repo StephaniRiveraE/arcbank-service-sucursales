@@ -18,7 +18,7 @@ import java.util.Objects;
 public class Sucursal {
 
     @Id
-    @DynamoDBHashKey
+    @DynamoDBHashKey(attributeName = "sucursal_id")
     private String idSucursal;
 
     @DynamoDBAttribute
